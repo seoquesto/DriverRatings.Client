@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "stable"
+  - 14
 git:
   depth: false
 branches:
@@ -13,6 +13,8 @@ script:
   - ./scripts/travis-ci.sh
   - ./scripts/travis-test.sh
   - ./scripts/travis-build.sh
+after_success:
+  - ./scripts/travis-success.sh
 notifications:
   email:
     recipients:
