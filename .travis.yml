@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - "stable"
+git:
+  depth: false
+branches:
+  only:
+    - master
+    - dev
+before_script:
+  - chmod -R a+x scripts
+script:
+  - ./scripts/travis-ci.sh
+  - ./scripts/travis-test.sh
+  - ./scripts/travis-build.sh
+notifications:
+  email:
+    recipients:
+      - seoquesto@gmail.com
+    on_success: never
+    on_failure: always
