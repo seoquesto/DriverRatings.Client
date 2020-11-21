@@ -2,10 +2,14 @@
   "name": "driver-ratings",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js"
+  },
   "dependencies": {
     "@babel/core": "7.12.3",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.2",
-    "@reduxjs/toolkit": "^1.4.0",
     "@svgr/webpack": "5.4.0",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
@@ -44,6 +48,7 @@
     "fs-extra": "^9.0.1",
     "html-webpack-plugin": "4.5.0",
     "identity-obj-proxy": "3.0.0",
+    "immer": "^8.0.0",
     "jest": "26.6.0",
     "jest-circus": "26.6.0",
     "jest-resolve": "26.6.0",
@@ -79,10 +84,9 @@
     "webpack-manifest-plugin": "2.2.0",
     "workbox-webpack-plugin": "5.1.4"
   },
-  "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+  "devDependencies": {
+    "@types/redux-saga": "^0.10.5",
+    "redux-devtools-extension": "^2.13.8"
   },
   "eslintConfig": {
     "extends": [
@@ -158,8 +162,5 @@
     "presets": [
       "react-app"
     ]
-  },
-  "devDependencies": {
-    "@types/redux-saga": "^0.10.5"
   }
 }
