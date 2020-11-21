@@ -1,4 +1,4 @@
-import { JwtDto } from '../../http/responsesDto/jwt-dto';
+import { JwtDto } from '@http/responsesDto';
 import {
   LoginAction,
   LoginErrorAction,
@@ -6,8 +6,8 @@ import {
   RefreshAccessTokenAction,
   RefreshAccessTokenErrorAction,
   RefreshAccessTokenSuccessAction,
-} from './auth-action-types';
-import { AuthActionConstants } from './auth-constants';
+  AuthActionConstants,
+} from '.';
 
 export const login = (): LoginAction => {
   return {

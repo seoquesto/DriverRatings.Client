@@ -1,7 +1,7 @@
 import React, { FC, memo, PropsWithChildren, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useTypedSelector } from '../../redux/rootState';
-import { login, refreshAccessToken } from './auth-actions';
+import { login, refreshAccessToken } from '.';
 import { AuthStorage } from './auth-storage';
 
 const _AuthProvider: FC<PropsWithChildren<{}>> = (props) => {

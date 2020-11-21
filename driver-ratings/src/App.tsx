@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { AuthProvider } from './providers/auth/auth-provider';
+import AuthProvider from './providers/auth';
 import { storage } from './redux/rootStorage';
 
 const _App: React.FC = React.memo((props) => (
