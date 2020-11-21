@@ -1,7 +1,14 @@
-import React from "react";
+import React from 'react';
+import { Provider } from 'react-redux';
+import { AuthProvider } from './providers/auth/auth-provider';
+import { storage } from './redux/rootStorage';
 
-function App() {
-  return <div>Hello world!.</div>;
-}
+const _App: React.FC = React.memo((props) => (
+  <Provider store={storage}>
+    <AuthProvider>
+      <div>test</div>
+    </AuthProvider>
+  </Provider>
+));
 
-export default App;
+export const App = React.memo(_App);
