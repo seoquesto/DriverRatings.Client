@@ -1,17 +1,16 @@
 import { put, takeLatest } from 'redux-saga/effects';
+import { httpClient } from '@http/axios';
+import { JwtDto } from '@http/responsesDto';
+import { LoginCommand, RefreshAccessTokenCommand } from '@http/requestsCommand';
+import { AxiosResponse } from 'axios';
 import {
   loginError,
   loginSuccess,
   refreshAccessTokenError,
   refreshAccessTokenSuccess,
-} from './auth-actions';
-import { AuthActionConstants } from './auth-constants';
-import { AxiosResponse } from 'axios';
-import { JwtDto } from '../../http/responsesDto/jwt-dto';
-import { LoginAction, RefreshAccessTokenAction } from './auth-action-types';
-import { LoginCommand } from '../../http/requestoCommand/login';
-import { RefreshAccessTokenCommand } from '../../http/requestoCommand/refresh-access-token';
-import { httpClient } from '../../http/axios';
+  AuthActionConstants,
+   LoginAction, RefreshAccessTokenAction
+} from '.';
 
 function* login(action: LoginAction) {
   try {

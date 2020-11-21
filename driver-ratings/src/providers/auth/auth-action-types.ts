@@ -1,6 +1,6 @@
 import { Action } from 'redux';
-import { JwtDto } from '../../http/responsesDto/jwt-dto';
-import { AuthActionConstants } from './auth-constants';
+import { JwtDto } from '@http/responsesDto';
+import { AuthActionConstants } from '.';
 
 export interface LoginAction extends Action<AuthActionConstants.Login> {
   type: AuthActionConstants.Login;

@@ -1,11 +1,10 @@
-import { AuthActionConstants } from './auth-constants';
-import { AuthState } from './auth-state';
+import { AuthActionConstants, AuthState } from '.';
 import produce from 'immer';
 import {
   AuthAction,
   LoginSuccessAction,
   RefreshAccessTokenSuccessAction,
-} from './auth-action-types';
+} from '.';
 
 const initState: AuthState = {
   accessToken: '',
