@@ -7,11 +7,10 @@ import {
 } from '.';
 
 const initState: AuthState = {
-  accessToken: '',
-  refreshToken: '',
+  accessToken: undefined,
+  refreshToken: undefined,
+  expires: undefined,
   loading: false,
-  isAuthenticated: false,
-  expires: 0,
 };
 
 export const authReducer = (

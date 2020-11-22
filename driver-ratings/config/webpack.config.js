@@ -325,6 +325,7 @@ module.exports = function (webpackEnv) {
         // Custom aliases
         '@http': path.resolve(paths.appSrc, 'http/'),
         '@env': path.resolve(paths.appSrc, 'env/'),
+        '@hooks': path.resolve(paths.appSrc, 'hooks/'),
         // '@http': path.resolve(__dirname, './src/http'),
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/

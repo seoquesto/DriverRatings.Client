@@ -1,7 +1,6 @@
 export interface AuthState {
-  accessToken: string;
-  refreshToken: string;
-  isAuthenticated: boolean;
-  expires: number;
+  accessToken?: string;
+  refreshToken?: string;
+  expires?: number;
   loading: boolean,
 }

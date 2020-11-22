@@ -23,6 +23,8 @@ export type {
   AuthAction,
 } from "./auth-action-types";
 
+export * from './auth-selectors';
+
 export { AuthActionConstants } from "./auth-constants";
 
 export type { AuthState } from "./auth-state";

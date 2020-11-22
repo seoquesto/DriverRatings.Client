@@ -2,8 +2,8 @@
 // TODO: REFRESH TOKEN IN HTTP ONLY COOKIE.
 export class AuthStorage {
   private static _instance: AuthStorage;
-  private accessToken: string = '';
-  private refreshToken: string = '';
+  private accessToken?: string;
+  private refreshToken?: string;
 
   private constructor() {}
 
@@ -14,24 +14,24 @@ export class AuthStorage {
     return this._instance;
   }
 
-  public setAccessToken(accessToken: string): void {
+  public setAccessToken(accessToken?: string): void {
     this.accessToken = accessToken;
   }
 
-  public setRefreshToken(refreshToken: string): void {
+  public setRefreshToken(refreshToken?: string): void {
     this.refreshToken = refreshToken;
   }
 
-  public getAccessToken(): string {
+  public getAccessToken(): string | undefined {
     return this.accessToken;
   }
 
-  public getRefreshToken(): string {
+  public getRefreshToken(): string | undefined {
     return this.refreshToken;
   }
 
   public clear(): void {
-    this.accessToken = '';
-    this.refreshToken = '';
+    this.accessToken = undefined;
+    this.refreshToken = undefined;
   }
 }
