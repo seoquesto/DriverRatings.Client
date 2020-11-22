@@ -1,5 +1,6 @@
 import React, { FC, memo, PropsWithChildren, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { REFRESH_ACCESS_TOKEN_REQUEST_THRESHOLD } from '@env';
 import { useTypedSelector } from '../../redux/rootState';
 import { login, refreshAccessToken } from '.';
 import { AuthStorage } from './auth-storage';
@@ -27,14 +28,9 @@ const _AuthProvider: FC<PropsWithChildren<{}>> = (props) => {
   useEffect(() => {
     if (expires) {
       const refreshTokenThreshold = (expires * 1000) - new Date().getTime();
-      const REFRESH_ACCESS_TOKEN_REQUEST = process.env.REACT_APP_REFRESH_ACCESS_TOKEN_REQUEST ;
-      if (REFRESH_ACCESS_TOKEN_REQUEST === undefined) {
-        throw new Error("REFRESH_ACCESS_TOKEN_REQUEST env variable is required.");
-      }
-
       setTimeout(() => {
         dispatch(refreshAccessToken(refreshToken));
-      }, refreshTokenThreshold - (+REFRESH_ACCESS_TOKEN_REQUEST * 1000 * 60))
+      }, refreshTokenThreshold - (REFRESH_ACCESS_TOKEN_REQUEST_THRESHOLD * 1000 * 60));
     }
   }, [expires]);
 
