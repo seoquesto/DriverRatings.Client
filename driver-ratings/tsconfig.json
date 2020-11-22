@@ -22,6 +22,8 @@
     "jsx": "react",
     "paths": {
       "@http/*": ["src/http/*"],
+      "@env": ["src/env"],
+      "@hooks": ["src/hooks"],
     }
   },
   "include": [

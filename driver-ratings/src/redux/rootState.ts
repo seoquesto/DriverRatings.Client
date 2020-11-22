@@ -1,4 +1,4 @@
-import { createSelectorHook, TypedUseSelectorHook, useSelector } from 'react-redux';
+import { createSelectorHook } from 'react-redux';
 import { AuthState } from '../providers/auth/auth-state';
 
 export interface RootState {
