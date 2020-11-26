@@ -24,6 +24,7 @@
       "@http/*": ["src/http/*"],
       "@env": ["src/env"],
       "@hooks": ["src/hooks"],
+      "@components": ["src/components"],
     }
   },
   "include": [
