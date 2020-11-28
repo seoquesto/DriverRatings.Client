@@ -1,2 +1,2 @@
 export { Loader } from './loader';
-export { Post } from './post';
+export { default as Post } from './post';

@@ -25,6 +25,7 @@
       "@env": ["src/env"],
       "@hooks": ["src/hooks"],
       "@components": ["src/components"],
+      "@utils": ["src/utils"],
     }
   },
   "include": [

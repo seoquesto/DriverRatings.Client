@@ -13,7 +13,7 @@ const _Posts: any = () => {
     dispatch(fetchPosts());
   }, []);
 
-  return isLoading ? <Loader /> : posts.map((x) => <Post post={x} />);
+  return isLoading ? <Loader /> : posts.map(post => <Post post={post} />);
 };
 
 export const Posts = memo(_Posts);

@@ -20,6 +20,7 @@ export interface FetchPostsErrorAction
   type: PostsActionConstants.FetchPostsError;
 }
 
+
 export type PostsAction =
   | FetchPostsAction
   | FetchPostsSuccessAction

@@ -1,8 +1,6 @@
 import { CreatorInfo } from ".";
 
-export interface PostComment {
-
-}
+export interface PostComment extends CommentBase {}
 
 export interface CommentBase {
   commentId: string;
