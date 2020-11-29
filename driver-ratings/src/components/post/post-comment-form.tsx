@@ -6,6 +6,7 @@ import React, {
   FormEvent,
   useCallback,
   SyntheticEvent,
+  useEffect,
 } from "react";
 import { MDBIcon, MDBInput, MDBBtn, MDBBox } from "mdbreact";
 const MAX_COMMENT_LENGTH: number = 250;
@@ -46,14 +47,22 @@ const _SendComment: FC<Props> = (props: Props): ReactElement => {
     [props.onPostComment, value]
   );
 
+  useEffect(() => {
+    if (props.loading) {
+      return;
+    }
+    setValue("");
+  }, [props.loading]);
+
   return (
     <MDBBox>
       <MDBInput
         type="textarea"
-        label="Comment"
+        hint="Write your comment here.."
         rows="2"
         icon="pencil-alt"
         value={value}
+        disabled={props.loading}
         onChange={onInputChange}
       />
       <MDBBtn

@@ -9,7 +9,7 @@ const _ApplicationRouter: FC = (props) => {
   return (
     <MDBContainer>
       <MDBRow center>
-        <MDBCol md="10" sm="12">
+        <MDBCol md="8" sm="12">
           <Switch>
             <Route path="/:plate">
               <LicensePlateProfile />
